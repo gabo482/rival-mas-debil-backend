@@ -1,8 +1,10 @@
 // src/routes/jugadores.js
 const express = require('express');
 const router = express.Router();
-const { agregarJugador } = require('../controllers/jugadoresController');
+const jugadoresController = require('../controllers/jugadoresController');
 
-router.post('/agregar', agregarJugador);
+// Ruta POST para agregar jugador
+router.post('/agregar', jugadoresController.agregarJugador);
 
 module.exports = router;
+
